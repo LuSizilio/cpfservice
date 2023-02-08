@@ -45,7 +45,7 @@ $ docker logs -f <Container_ID> # Colocar id do container cpfservices
 
 ```
 
-O Servidor irá rodar na porta 8000 e você poderá consumir a api a partide de http://localhost:8000 e consultar a documentação da api em http://localhost:8000/api
+O Servidor irá rodar na porta 8000 e você poderá consumir a api a partir de http://localhost:8000 e consultar a documentação da api em http://localhost:8000/api
   
 
 ## Testes
