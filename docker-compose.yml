@@ -1,0 +1,37 @@
+version: '3.1'
+
+services:
+  cpfservice:
+    build:
+      dockerfile: Dockerfile
+      context: .
+      target: development
+    restart: always
+    env_file:
+      - .env
+    environment:
+      - DATABASE_URL=postgresql://luciano:max@host.docker.internal:5434/cpfservice?schema=public
+    command: npm run start:dev
+    ports:
+      - 8000:8000
+    networks:
+      - cpfnet
+    depends_on:
+      - postgres
+  postgres:
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_DB: cpfservice
+      POSTGRES_USER: luciano
+      POSTGRES_PASSWORD: max
+    ports:
+      - '5434:5432'
+    networks:
+      - cpfnet
+    volumes:
+      - docker-postgres:/var/lib/postgresql/data
+volumes:
+  docker-postgres:
+networks:
+  cpfnet:
