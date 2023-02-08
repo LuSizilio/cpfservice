@@ -66,8 +66,8 @@ $ npm  run  test
   
 
 - Erro ao rodar a api
--- Não encontrou o servidor: No arquivo *docker-compose.yml* modifique na linha 13 o *host.docker.internal* pelo ip do seu computador. (ex: ipv4 obtido pelo comando ipconfig no windows na seção *Adaptador de Rede sem Fio Wi-Fi*)
--- Não está funcionando na forma de execução padrão: Verificar se a versão do node 16.15.1+
+  - Não encontrou o servidor: No arquivo *docker-compose.yml* modifique na linha 13 o *host.docker.internal* pelo ip do seu computador. (ex: ipv4 obtido pelo comando ipconfig no windows na seção *Adaptador de Rede sem Fio Wi-Fi*)
+  - Não está funcionando na forma de execução padrão: Verificar se a versão do node 16.15.1+
 
   
 
